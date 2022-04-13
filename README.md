@@ -1,6 +1,6 @@
 # EE250_finalProject
 
-Project title: R-Emote
+Project title: R-Emote <endl>
 Project description: Social Queue Detector
 Records user audio
 Snaps picture of listener’s face
