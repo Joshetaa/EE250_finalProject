@@ -99,10 +99,13 @@ triggerWords = []
 # emotion = sys.argv[1] # out put form caleb's script 
 if emotion == "Anger":
     word_base = anger_words
+    color = "Red"
 elif emotion == "Sad":
     word_base = sadness_words
+    color = "Blue"
 elif emotion == "Happy":
     word_base = joy_words
+    color = "Yellow"
 
 # check sentence
 for word in text_list:
@@ -111,4 +114,10 @@ for word in text_list:
 
 
 print("\nTrigger words for {}: ".format(emotion), triggerWords)
+
+# SET VARIABLES TO BE USED BY PUBLISHER 
+# emotion_string = emotion
+# triggerWords_string = ' '.join(triggerWords)
+color_string = color
+display_string = emotion + '\n'+ ''.join(triggerWords)
 
