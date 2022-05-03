@@ -48,7 +48,7 @@ def colorCallback(client, userdata, msg):
 
 def displayCallback(client, userdata, msg):
     new_msg = str(msg.payload, "utf-8")
-    pritn(new_msg)
+    print(new_msg)
     '''
     with lock:
         setText(new_msg)    
