@@ -133,6 +133,10 @@ if __name__ == '__main__':
     color_string = color
     display_string = emotion + '\n'+ ''.join(triggerWords)
 
+    print(color)
+    print(display_string)
+
+    '''
     #this section is covered in publisher_and_subscriber_example.py
     client = mqtt.Client()
     client.on_connect = on_connect
@@ -146,3 +150,4 @@ if __name__ == '__main__':
     while True:
         # print("delete this line")
         time.sleep(1)
+    '''
