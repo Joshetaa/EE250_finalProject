@@ -93,6 +93,7 @@ def on_connect(client, userdata, flags, rc):
 if __name__ == '__main__':
     
     emotion = emotionDetector(sys.argv[1])
+    print(emotion)
 
     text_list = audioDetection(sys.argv[2])
     
