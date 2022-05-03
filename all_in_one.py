@@ -52,7 +52,7 @@ def emotionDetector(img_path):
     if (np.argmax(Predictions) == 0):
         emotion = "Anger" 
     elif (np.argmax(Predictions) == 1):
-        emotion = "Hapy"
+        emotion = "Happy"
     elif( np.argmax(Predictions) == 2):
         emotion = "Sad"
 
