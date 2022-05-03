@@ -34,20 +34,25 @@ def on_message(client, userdata, msg):
 # custom callback for ultrasonic range finder 
 def colorCallback(client, userdata, msg):
     color = str(msg.payload, "utf-8")
+    print(color)
+    '''
     if color == "Yellow":
         setRGB(0,128,64) # edit color 
     elif color == "Red":
         setRGB(0,128,64) # edit color 
     elif color == "Blue": 
         setRGB(0,128,64) # edit color 
+    '''
     
     
 
 def displayCallback(client, userdata, msg):
     new_msg = str(msg.payload, "utf-8")
+    pritn(new_msg)
+    '''
     with lock:
-        setText(new_msg) 
-    
+        setText(new_msg)    
+    '''
 
     
 if __name__ == '__main__':
