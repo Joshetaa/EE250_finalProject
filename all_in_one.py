@@ -17,7 +17,7 @@ from pynput import keyboard
 #import speech2triggerWords as s2tW
 
 ##Run facial detection
-def emotionDetector(img_path)
+def emotionDetector(img_path):
     #load model
     temp_model = tf.keras.models.load_model('Signal Process/Emotion Recognition/Final_model_3em1.h5') 
 
@@ -59,7 +59,7 @@ def emotionDetector(img_path)
     return emotion;
 
 ##Run audio detection
-def audioDetection(audio_path)
+def audioDetection(audio_path):
     # Initialize recognizer class (for recognizing the speech)
     r = sr.Recognizer()
 
