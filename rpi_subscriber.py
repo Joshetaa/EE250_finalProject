@@ -1,5 +1,5 @@
 from ast import Return
-from torch import R
+#from torch import R
 import paho.mqtt.client as mqtt
 import time
 import sys
@@ -8,9 +8,9 @@ import threading
 lock = threading.Lock()
 
 sys.path.append('../../Software/Python/')
-import grovepi
-from grovepi import *
-from grove_rgb_lcd import *
+#import grovepi
+#from grovepi import *
+#from grove_rgb_lcd import *
 
 def on_connect(client, userdata, flags, rc):
     print("Connected to server (i.e., broker) with result code "+str(rc))

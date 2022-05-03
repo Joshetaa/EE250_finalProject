@@ -136,18 +136,18 @@ if __name__ == '__main__':
     print(color)
     print(display_string)
 
-    '''
+    
     #this section is covered in publisher_and_subscriber_example.py
     client = mqtt.Client()
     client.on_connect = on_connect
     client.connect(host="eclipse.usc.edu", port=11000, keepalive=60)
     client.loop_start()
 
-    client.publish("jaleb/display", s2tW.display_string)
+    client.publish("jaleb/display", display_string)
     # client.publish("jaleb/triggerWords", s2tW.triggerWords_string)
-    client.publish("jaleb/color", s2tW.color_string)
+    client.publish("jaleb/color", color)
 
     while True:
         # print("delete this line")
         time.sleep(1)
-    '''
+    
