@@ -58,14 +58,14 @@ def emotionDetector(img_path)
 
     return emotion;
 
-##Run audio detection and find trigger words
-def audioDetection(audio_path, emotion)
+##Run audio detection
+def audioDetection(audio_path)
     # Initialize recognizer class (for recognizing the speech)
     r = sr.Recognizer()
 
     # Reading Audio file as source
     # listening the audio file and store in audio_text variable
-    with sr.AudioFile('Audio_data/test_happy.wav') as source:
+    with sr.AudioFile(audio_path) as source:
     
         audio_text = r.listen(source)
     
