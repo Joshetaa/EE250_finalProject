@@ -8,16 +8,16 @@ import threading
 lock = threading.Lock()
 
 sys.path.append('../../Software/Python/')
-#import grovepi
-#from grovepi import *
-#from grove_rgb_lcd import *
+import grovepi
+from grovepi import *
+from grove_rgb_lcd import *
 
 def on_connect(client, userdata, flags, rc):
     print("Connected to server (i.e., broker) with result code "+str(rc))
 
     #subscribe to the ultrasonic ranger topic here
     client.subscribe("jaleb/emotion") # subscribe to channel
-    client.subscribe("jaleb/triggerWords") # subscribe to channel
+    #client.subscribe("jaleb/triggerWords") # subscribe to channel
     client.subscribe("jaleb/color") # subscribe to channel
     
     
@@ -35,24 +35,24 @@ def on_message(client, userdata, msg):
 def colorCallback(client, userdata, msg):
     color = str(msg.payload, "utf-8")
     print(color)
-    '''
+    
     if color == "Yellow":
-        setRGB(0,128,64) # edit color 
+        setRGB(255,255,0) # edit color 
     elif color == "Red":
-        setRGB(0,128,64) # edit color 
+        setRGB(255,0,0) # edit color 
     elif color == "Blue": 
-        setRGB(0,128,64) # edit color 
-    '''
+        setRGB(0,255,0) # edit color 
+    
     
     
 
 def displayCallback(client, userdata, msg):
     new_msg = str(msg.payload, "utf-8")
     print(new_msg)
-    '''
+    
     with lock:
         setText(new_msg)    
-    '''
+    
 
     
 if __name__ == '__main__':
