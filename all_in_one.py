@@ -1,5 +1,5 @@
 ## Speech Recognition imports
-#import pandas as pd
+import pandas as pd
 import speech_recognition as sr
 import sys
 
@@ -132,9 +132,7 @@ if __name__ == '__main__':
     # emotion_string = emotion
     # triggerWords_string = ' '.join(triggerWords)
     color_string = color
-    display_string = emotion + ':\n'
-    for x in list:
-        display_string += ' ' + x
+    display_string = emotion + ':\n'+' '.join(triggerWords)
 
     print(color)
     print(display_string)
