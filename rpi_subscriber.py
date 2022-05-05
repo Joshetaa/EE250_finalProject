@@ -44,19 +44,23 @@ def colorCallback(client, userdata, msg):
             setRGB(255,0,0) # edit color 
         elif color == "Blue": 
             setRGB(0,255,0) # edit color 
-    
-    
-    
 
 def displayCallback(client, userdata, msg):
     new_msg = str(msg.payload, "utf-8")
     print("Made it here")
     print(new_msg)
-    
-    with lock:
-        setText(new_msg)    
-    
 
+    msgs = new_msg.split('\n')
+    ind = 0
+    with lock:
+        while True:
+            # Display emotion
+            setText_norefresh(msgs[0])
+
+            # Scroll trigger words
+            setText_norefresh('\n' + msgs[1][ind:ind+16])
+            ind = (ind + 1)%len(msgs[1])
+            #setText(new_msg)
     
 if __name__ == '__main__':
     #this section is covered in publisher_and_subscriber_example.py
