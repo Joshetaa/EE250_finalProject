@@ -26,11 +26,11 @@ server. The RPi which has subscribed to the data from the publisher should displ
   
 If you would like to use existing samples of videos and pictures follow the following instructions: 
   1. Sad : run 
-     python3 all_in_one.py "Test files/Sadman.jpg" "Test files/Sad talk.wav"
+     python3 all_in_one.py "Sadman.jpg" "Sad talk.wav"
   2. Happy : run
-     python3 all_in_one.py "Test files/Happyman.jpg" "Test files/Happy talk.wav"
+     python3 all_in_one.py "Happyman.jpg" "Happy talk.wav"
   3. Angry : run 
-     python3 all_in_one.py "Test files/Angrywoman.jpg" "Test files/Angry talk.wav"
+     python3 all_in_one.py "Angrywoman.jpg" "Angry talk.wav"
   
 
 Libraries used:
